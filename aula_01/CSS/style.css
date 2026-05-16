@@ -1,0 +1,114 @@
+/* Aula 01 - CSS Página de Boas Vindas 
+Metodologia: MOBILE-FIRST
+
+- Estilos base são otimizados para CELULARES (Viewport pequeno)
+- Telas maiores recebem ajustes via MEDIA QUERIES (Viewport maior)
+- Garante boas experiências em qualquer dispositivo]
+
+Estrutua do CSS:
+Estilos Globais (body, fontes)
+Estilos header ( cabeçalho)
+Estilos main (conteúdo principal)
+Estilos dso elementos (img,p, buttons)
+Média Queries para desktop (ao final)
+*/
+
+/* Estilos Globais (Base Mobile) */
+
+/* Pega toda a página, retira o CSS padrão do Navegador*/
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Define a familia de fontes padrão para toda a página*/
+
+    background-color: #000000; /* Define a cor de fundo da página*/
+
+    color: #f7f7f7; /* Define a cor padrão para o texto*/
+
+    margin: 0; /* Espaçamento externo do elemento*/
+    padding: 0; /*Espaçamento interno do elemento*/
+
+    text-align: center; /* Alinha todo o texto ao centro da página*/
+}
+
+header {
+    background-color: #6d0000; /* Define a cor de fundo do cabeçalho*/
+    color: #fff7f7; /* Define a cor do texto no cabeçalho*/
+    padding: 30px 15px;
+}
+
+h1 {
+    font-size: 1.8em; /* define o tamanho da fonte em proporção em todas as telas*/
+    font-weight: 700; /* Define a espessura da fonte*/
+}
+/* O h1 é p título mais importante da página*/
+/* Ele deve ser usado somente uma vez para manter a hierarquia semântica*/
+
+/*Estilo da main - (Conteúdo principal)*/
+main {
+    padding: 30px 15px; /*Espaçamento interno do elemento main*/
+}
+
+/*Estilos do Elemento*/
+
+/*Estilo de img*/
+img {
+ width: 100%; /* Define a largura da imagem para ocupar todo o espaço de largura*/
+ max-width: 1000px; /* Define a largura máxima da imagem para evitar que fique muito grande em telas maiores*/
+ border-radius: 10px; /* Adiciona bordas arredondadas à imagem*/
+ border: 1px solid #fff7f7; /* Adiciona uma borda fina ao redor da imagem com a cor definida*/
+ margin: 1px; /* Adiciona uma margem ao redor da imagem para criar espaço entre ela e outros elementos*/
+ box-shadow: 0 6px 16px rgba(92, 0, 0, 0.9); /* Adiciona uma sombra à imagem para dar um efeito de profundidade*/
+}
+/* Estilo dos parágrafos */
+
+p {
+    font-size: 1rem; /* Define o tamanho da fonte*/
+    margin-bottom: 30px; /* Adiciona um espaçamento abaixo do parágrafo*/
+    line-height: 1.2; /* Define um espaçamento entre linhas*/   
+}
+
+/* Estilo dos botões */
+.button {
+    display:block; /* Define o botão como um elemento de bloco para ocupar toda a largura disponível*/
+    background-color:#000000; /* Define a cor de fundo do botão*/
+    color:#fffefe; /* Define a cor do texto do botão*/
+
+    padding: 15px; /* Espaçamento interno*/
+    text-decoration: none; /* Retira a decoração dos links*/
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão*/
+    font-weight: bold; /* Define a espessura da fonte do botão*/
+    transition: background-color 0.9s ease; /* Adiciona uma transição suave para a mudança de cor do botão*/
+}
+
+footer {
+    background-color:#000000; /* Define a cor de fundo*/
+    color:rgb(182, 182, 182); /* Define a cor do texto*/
+    padding: 15px 0; /* espaçamento interno*/
+    width: 100%; /* Largura*/
+}
+
+/*Media Queries: Telas maiores (Desktop)*/ 
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /*Tamanho da fonte maior*/
+    }
+
+    p{
+        font-size: 1.2rem;
+         max-width: 600px; /*Máximo de largura*/
+        margin: 0 auto 30px; /*Ajustando o espaçamento externo*/
+    }
+
+    .button {
+        display: inline-block;/*botão volta a ser pequeno para desktop*/
+        padding: 15px 45px; /*Espaçamento interno*/ 
+    }
+
+    footer {
+        position: fixed; /*fixa algum elemento da página*/
+        bottom: 0; /* espaçamento embaixo do elemento*/
+    }
+}
