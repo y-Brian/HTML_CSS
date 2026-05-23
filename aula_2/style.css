@@ -1,0 +1,117 @@
+/*
+Aula 02 - CSS para cartão produto 
+
+Tópicos abordados::after
+
+1. FlexBox (centralizaçao dos elementos)
+2. Box shadows (sombreamento nos elementos)
+3. Border radius (arredondar bordas do elementos)
+4. Hover effects (itneratividade)
+5. Responsive design
+6. Transições CSS (smooth animation)
+*/
+
+/*
+Estilos Globais
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /* ajusta a altura e largura fica mais previsiveis */
+}
+
+body {
+    font-family: 'Arial', sans-serif;/* fonte do texto de toda página*/
+    
+    background-color: #e4e4e4; /* cor de fundo da página */
+   padding: 20px; /* espaçamento interno da página */
+   display: flex; /* ativa o flexbox para permitir centralizar o conteúdo */
+   justify-content: center; /* centraliza horizontalmente (esquerda-direita)*/
+   align-items: center; /* centraliza verticalmente (cima-baixo) */
+   min-height: 100vh; /* garante que a altura mínima seja igual à altura da janela de visualização */
+}
+
+/*Conteiner (div wrapeer)*/
+.container {
+    /* O container é o pai do .product-card
+    herdando o flex do body, pode ter suas proprias propriedades */
+    width: 100%; /* largura total do contêiner */
+}
+
+/* Carão do produto (product-card)*/
+.product-card {
+    background-color: rgb(218, 218, 218); /* cor de fundo do cartão */
+    width: 100%; /* largura total do cartão */
+    max-width: 320px; /* largura máxima do cartão */
+    border-radius: 5px; /* arredondamento das bordas do cartão */
+    overflow: hidden; /* esconde qualquer conteúdo que ultrapasse as bordas do cartão */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); /*Adiciona sombreamneto ao elemento) */
+    /*hprizontal, vertical, blur, spread, cor com transparência */
+    transition: transform 0.2 ease; /*transição suave para animações (transform levará 0.2s para ocorrer)*/
+}
+/*imagem do produto */
+.product-card img {
+    width: 100%; /* largura total da imagem */
+    height: 230px; /* altura da imagem */
+    object-fit: cover; /* garante que a imagem preencha o espaço sem distorção */
+
+}
+
+/* Conteúdo interno do cartão*/
+.car-content {
+    padding: 20px; /* espaçamento interno do conteúdo do cartão */
+    text-align: center; /* centraliza o texto dentro do conteúdo do cartão */
+}
+
+h3 {
+    color: #000000 ; /* cor do texto */
+    font-size: 1.3em; /* tamanho da fonte */
+}
+
+p {
+    color:#000000; /* cor do texto */
+    font-size: 0.9rem; /* tamanho da fonte */
+    line-height: 1.4; /* espaçamento entre linhas */
+    margin-bottom: 20px; /* espaçamento inferior */
+}
+
+.price {
+display: block; /* exibe o preço como um bloco, ocupando toda a largura disponível */
+font-size: 1.4rem;
+font-weight: bold; /* deixa o texto em negrito */
+color:rgb(56, 153, 60);
+margin-bottom: 20px; /* espaçamento inferior */
+}
+
+/*Botão de compra */
+
+.buy-btn {
+    display: block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/*MEDIA QUERY: DESKTOP*/
+@media (min-width: 1024px) {
+    /*Efeito de zoom quando o mouse passa por cima do cartão do produto */
+    .product-card:hover {
+        /*Scale: aumenta o tamanho do elemento no zoom*/
+        transform: scale(1.05);
+
+    }
+h3 {
+    font-size: 1.5rem;
+}
+.buy-btn:hover {
+    background-color:#000000
+}
+    }

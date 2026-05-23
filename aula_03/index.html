@@ -1,0 +1,84 @@
+<!DOCTYPE html>     
+<!-- Aula 03 - Receita e FlexBox 
+ 
+Objetivo: Criar uma receita utilizando felx box de forma avançada -->
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03 - Receita e FlexBox</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!--Conteiner principal que centraliza todo conteúdo da receita-->
+    <div class="recipe-container">
+        <!--Título principal-->
+<h1> Bolo de cenoura com chocolate </h1>
+<!--Seç]ao para ingredientes-->
+<!--Tag semântica <section> agrupa conteúdos relacionados-->
+<section class="ingredients">
+<!--Subtítulo-->
+    <h2>Ingredientes</h2>
+    <!--Lista flexível de ingredientes-->
+    <!--Utiliza CSS flexbox para mudar de layout conforme o tamanho da tela
+    -Mobile: os itens em coluna
+    =Desktop: os itens em linha-->
+
+    <!--ul-cria listas não ordenadas -->
+    <ul class="flex-list">
+        <!--li- crie os itens da lista-->
+        <li>3 cenouras médias raladas</li>
+        <li>4 ovos</li>
+        <li>1 xícara de óleo</li>
+        <li>2 xícaras de açúcar</li>
+        <li>2 xícaras de farinha</li>
+        <li>1 colher de fermento</li>
+    </ul>
+</section>
+<!-- Seção de informações nutricionais-->
+ <!--Seção semântica para daods tabulares-->
+<section class="info"> 
+    <h2>Informações Nutricionais </h2>
+
+<!--Tabela Responsiva-->
+<!--Tabela que exibe os nutrientes e a quantidade em porção
+No CSS, aplica scroll horizontal em mobile se necessário-->
+<!--Tabela: usada para organizar dados em linhas e colunas-->
+
+<table>
+    <!--Cabeçalho da tabela-->
+<thead> 
+    <!--TR - cria uma linha -->
+    <tr>
+        <!--TH - Título da tabela ou Nome da coluna-->
+        <th>Nutriente</th>
+        <th>Quantidade</th>
+    </tr>
+</thead>
+
+<!--Tbody - representa o corpo da tabela (onde fica os dados)-->
+<tbody> 
+    <tr> 
+        <!--TD - Célula de conteúdo-->
+        <td> Calorias</td>
+        <td> 320 kcal</td>
+    </tr>
+
+    <tr> 
+        <td> Açúcares</td>
+        <td> 25g</td> 
+        <tr>
+            <td> Gorduras</td>
+            <td> 12g</td>
+        </tr>
+    </tr>
+</tbody>
+</table>
+</section>
+
+        </div>
+
+</body>
+</html>
