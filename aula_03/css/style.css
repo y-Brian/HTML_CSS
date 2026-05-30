@@ -50,6 +50,7 @@ h1 {
     flex-direction: column; /*Organiza os itens em uma coluna e o row os itens ficam lado a lado*/
      gap: 3px ; /*Adiciona um espaço entre os itens da lista*/
      list-style: none; /*Remove os marcadores padrão da lista*/
+     margin: 5px 0;
     }
 
     /*Estilo de cada item da lista*/
@@ -65,5 +66,48 @@ h1 {
     .info {
         /*Se a tabela ficar muito larga em mobile, permite scroll horizontal*/
         overflow: auto;
+    }
+
+    table { 
+        width: 100%; /*Ocupa 100% do espaço disponível*/
+        min-width: 300px; /*Largura mínima*/
+        border-collapse: collapse; /*Remove os espaços entre as linhas*/
+        margin-top: 20px; /*Espaçamento acima da tabela*/
+    }
+
+    th, td {
+        padding: 10px; /*Espaçamento interno das células*/
+        font-size: 0.9rem; /*Tamanho da fonte*/
+        border-bottom: 1px solid #382820; /*Linha divisoria entre as células*/    
+    }
+
+    /*Media Queries: Tablet e Desktops*/
+
+    @media (min-width: 768px) {
+        .recipe-container{
+            max-width: 800px; /*Largura máxima*/
+            margin: 0 auto ; /* Centralização horizontal*/
+            padding: 40px; /*Maior espaço interno*/
+        }
+
+        h1 {
+            font-size: 2.2rem; /*Aumenta o tamanho do título*/
+        }
+
+        .flex-list {
+            flex-direction: row; /*Deixa as direções em linhas*/
+            justify-content: center; /*Centralizou o conteúdo horizontalmente*/
+        }
+
+        .flex-list li {
+            padding: 10px 20px; /*Aumenta o espaçamento interno dos itens da lista*/
+        border-radius: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            font-size: 1rem;
+        }
+
     }
 
