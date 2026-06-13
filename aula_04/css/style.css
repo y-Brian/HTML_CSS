@@ -53,6 +53,7 @@ h2 {
 text-align: center;
 font-size: 1.4rem;
 color: rgb(0, 0, 0);
+margin-bottom: 20px;
 }
 
 .form-group {
@@ -72,4 +73,35 @@ input, select, textarea {
     border: 1px solid black;
     border-radius: 6px;
     font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(236, 234, 102);
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/*Media Queries*/
+@media (min-width: 768px) {
+    body {
+        align-items: center;
+        background: linear-gradient(135deg, rgb(238, 238, 147) 30%, rgb(255, 255, 255) 90%);
+    }
+
+    .form-wrapper {
+        padding: 40px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    }
+
+    button:hover {
+        background: rgb(236, 234, 102);
+        cursor: pointer;
+    }
+
 }

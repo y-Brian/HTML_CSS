@@ -1,0 +1,66 @@
+/*
+Aula 05 - CSS PARA LAYOUT DE NOTICIAS
+
+
+
+Tópicos Principais:
+1.Header com logo e navegação
+2.Flexbox para layout principal
+3.content e sidebar com proproção flex
+4.Footer
+5.responsível em 992px para desktop
+*/
+
+/*Estilos globais*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:rgb(205, 207, 207);
+}
+
+.main-header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.log {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+
+
+    gap: 15px;
+}
+
+
+nav a {
+    color:#ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Aula 05 - layout de notícias </title>
+</head>
+<body>
+<header class="main-header">
+    <div class="logo">TecNews</div>
+<!--Menu de navegação
+Tag(nav) é a semântica e indica navegação -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gadgets</a></li>
+            <li><a href="#">Software</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--wrapper do layout ( flex: colum no mobile e Row mo desktop)-->
+<div class="layout-wrapper">
+<!--Conteúdo Principal-->
+<!--Seção semântica para o conteúdo principal -->
+    <main class="main-content">
+        <!--Artigo principal -->
+        <!-- Tag semântica infica um artigo/post independente-->
+        <Article class="post">
+            <h1>O futuro da Inteligência Artificial</h1>
+
+            <img src="./img/image.png" alt="Imagem de IA">
+
+            <p>A inteligência artificial atingiu um novo patamar de integração no cotidiano </p>
+            <p>Novos Modelos multimodais permitem interações naturais e eficientes</p>
+        </Article>
+    </main>
+
+<!--Sidebar/Aside (Barra lateral)-->
+<!--Seção semântica para conteúdos secundários (barras laterais)-->
+    <aside class="sidebar">
+        <h3>Mais lidas</h3>
+        <!--Lista de artigos relacionados-->
+        <ul>
+            <li><a href="#">Lançamento do novo Iphone</a></li>
+            <li><a href="#">dICAS DE CSS Grid</a></li>
+            <li><a href="#">O que é Web3</a></li>
+        </ul>
+    </aside>
+</div>
+
+
+<footer class="main-footer">
+    <p>&copy; 2024 TecNews. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>
